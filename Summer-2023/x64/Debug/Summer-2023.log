@@ -1,0 +1,12 @@
+﻿Summer-2023.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::String::String(char const *,class std::locale const &)" (__imp_??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z) référencé dans la fonction main
+Summer-2023.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::String::~String(void)" (__imp_??1String@sf@@QEAA@XZ) référencé dans la fonction main
+Summer-2023.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (__imp_??0VideoMode@sf@@QEAA@III@Z) référencé dans la fonction main
+Summer-2023.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::RenderWindow::RenderWindow(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (__imp_??0RenderWindow@sf@@QEAA@VVideoMode@1@AEBVString@1@IAEBUContextSettings@1@@Z) référencé dans la fonction main
+Summer-2023.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: virtual __cdecl sf::RenderWindow::~RenderWindow(void)" (__imp_??1RenderWindow@sf@@UEAA@XZ) référencé dans la fonction main
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-graphics-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-window-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-system-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-network-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-audio-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-main-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\source\repos\Summer-2023\x64\Debug\Summer-2023.exe : fatal error LNK1120: 5 externes non résolus
