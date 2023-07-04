@@ -1,5 +1,0 @@
-﻿  Summer-2023.cpp
-C:\Users\Utilisateur\source\repos\Summer-2023\Summer-2023\Summer-2023.cpp(4,28): warning C4244: 'return' : conversion de 'double' en 'float', perte possible de données
-C:\Users\Utilisateur\source\repos\Summer-2023\Summer-2023\Summer-2023.cpp(37,19): warning C4305: 'initialisation' : troncation de 'double' à 'float'
-C:\Users\Utilisateur\source\repos\Summer-2023\Summer-2023\Summer-2023.cpp(62,28): warning C4305: '+=' : troncation de 'double' à 'float'
-  Summer-2023.vcxproj -> C:\Users\Utilisateur\source\repos\Summer-2023\Debug\Summer-2023.exe

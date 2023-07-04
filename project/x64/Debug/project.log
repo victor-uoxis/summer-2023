@@ -1,0 +1,17 @@
+﻿  Game.cpp
+x64\Debug\includes.obj : warning LNK4042: objet spécifié plus d'une fois ; définitions supplémentaires ignorées
+Game.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::String::String(char const *,class std::locale const &)" (__imp_??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z) référencé dans la fonction "private: void __cdecl Game::initWindow(void)" (?initWindow@Game@@AEAAXXZ)
+Game.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::String::~String(void)" (__imp_??1String@sf@@QEAA@XZ) référencé dans la fonction "private: void __cdecl Game::initWindow(void)" (?initWindow@Game@@AEAAXXZ)
+Game.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (__imp_??0VideoMode@sf@@QEAA@III@Z) référencé dans la fonction "private: void __cdecl Game::initWindow(void)" (?initWindow@Game@@AEAAXXZ)
+Game.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: __cdecl sf::RenderWindow::RenderWindow(void)" (__imp_??0RenderWindow@sf@@QEAA@XZ) référencé dans la fonction "public: __cdecl Game::Game(void)" (??0Game@@QEAA@XZ)
+Game.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: virtual __cdecl sf::RenderWindow::~RenderWindow(void)" (__imp_??1RenderWindow@sf@@UEAA@XZ) référencé dans la fonction "int `public: __cdecl Game::Game(void)'::`1'::dtor$0" (?dtor$0@?0???0Game@@QEAA@XZ@4HA)
+Game.obj : error LNK2019: symbole externe non résolu "public: virtual __cdecl Game::~Game(void)" (??1Game@@UEAA@XZ) référencé dans la fonction "public: virtual void * __cdecl Game::`scalar deleting destructor'(unsigned int)" (??_GGame@@UEAAPEAXI@Z)
+project.obj : error LNK2001: symbole externe non résolu "public: virtual __cdecl Game::~Game(void)" (??1Game@@UEAA@XZ)
+project.obj : error LNK2019: symbole externe non résolu "__declspec(dllimport) public: bool __cdecl sf::WindowBase::isOpen(void)const " (__imp_?isOpen@WindowBase@sf@@QEBA_NXZ) référencé dans la fonction main
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-main-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-network-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-audio-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-graphics-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-system-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\OneDrive\Documents\SFML-2.6.0\lib\sfml-window-d.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\Utilisateur\source\repos\summer-2023\project\x64\Debug\project.exe : fatal error LNK1120: 7 externes non résolus
