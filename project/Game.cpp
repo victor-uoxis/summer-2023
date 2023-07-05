@@ -12,12 +12,32 @@ Game::~Game()
 	delete player;
 }
 
+void Game::updateCollisions()
+{
+	if (player->getPosition().y + player->getBounds().height >= window.getSize().y) {
+		player->resetGravity();
+		player->setPosition(player->getPosition().x,
+			window.getSize().y - player->getBounds().height / 2);
+	}
+}
+
 void Game::update()
 {
-	while (this->window.pollEvent(this->event)) {
-		if (this->event.type == sf::Event::Closed)
-			this->window.close();
+	while (window.isOpen()) {
+		while (this->window.pollEvent(this->event)) {
+			if (this->event.type == sf::Event::Closed)
+				this->window.close();
+			if (event.type == sf::Event::KeyReleased &&
+				(event.key.code == sf::Keyboard::Up ||
+					event.key.code == sf::Keyboard::Down ||
+					event.key.code == sf::Keyboard::Left ||
+					event.key.code == sf::Keyboard::Right))
+				player->resetAnimTimer();
+			updatePlayer();
+		}
 		updatePlayer();
+		updateCollisions();
+		render();
 	}
 }
 

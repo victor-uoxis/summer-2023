@@ -24,6 +24,36 @@ Player::~Player()
 {
 }
 
+const bool& Player::getAnimSwitch()
+{
+	bool tmp = animSwitch;
+
+	if (tmp)
+		animSwitch = false;
+
+	return tmp;
+}
+
+const sf::Vector2f Player::getPosition() const
+{
+	return sprite.getPosition();
+}
+
+const sf::FloatRect Player::getBounds() const
+{
+	return sprite.getGlobalBounds();
+}
+
+void Player::resetGravity()
+{
+	velocity.y = 0.f;
+}
+
+void Player::setPosition(const float x, const float y)
+{
+	sprite.setPosition(x, y);
+}
+
 void Player::update()
 {
 	move();
@@ -34,31 +64,30 @@ void Player::update()
 void Player::move()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) {
-		moveVector(-5.f, 0.f);
+		moveVector(-1.f, 0.f);
 		sprite.setScale(-4.f, 4.f);
 		animState = ANIM_STATE::left;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) {
-		moveVector(5.f, 0.f);
+		moveVector(1.f, 0.f);
 		sprite.setScale(4.f, 4.f);
 		animState = ANIM_STATE::right;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) {
-		moveVector(0.f, 5.f);
-		animState = ANIM_STATE::air;
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up)) {
-		moveVector(0.f, -5.f);
-	}
 	else
 		animState = ANIM_STATE::idle;
+}
+
+void Player::resetAnimTimer()
+{
+	animationTimer.restart();
+	animSwitch = true;
 }
 
 void Player::updateAnimations()
 {
 	if (animState == ANIM_STATE::idle) {
 		frame.top = 0;
-		if (animationTimer.getElapsedTime().asSeconds() >= .5f) {
+		if (animationTimer.getElapsedTime().asSeconds() >= .5f || getAnimSwitch()) {
 			frame.left += 60;
 			if (frame.left > 60)
 				frame.left = 0;
@@ -69,7 +98,7 @@ void Player::updateAnimations()
 	}
 	else if (animState == ANIM_STATE::right) {
 		frame.top = 105;
-		if (animationTimer.getElapsedTime().asSeconds() >= .2f) {
+		if (animationTimer.getElapsedTime().asSeconds() >= .2f || getAnimSwitch()) {
 			frame.left += 60;
 			if (frame.left > 300)
 				frame.left = 0;
@@ -80,7 +109,7 @@ void Player::updateAnimations()
 	}
 	else if (animState == ANIM_STATE::left) {
 		frame.top = 105;
-		if (animationTimer.getElapsedTime().asSeconds() >= .2f) {
+		if (animationTimer.getElapsedTime().asSeconds() >= .2f || getAnimSwitch()) {
 			frame.left += 60;
 			if (frame.left > 300)
 				frame.left = 0;
@@ -98,16 +127,20 @@ void Player::moveVector(const float x, const float y)
 	velocity.x += x * accel;
 	velocity.y += y * accel;
 
-	if (std::abs(velocity.x) > maxVelocity) {
+	if (std::abs(velocity.x) >= maxVelocity) {
 		velocity.x = velocity.x < 0 ? -maxVelocity : maxVelocity;
 	}
-	if (std::abs(velocity.y) > maxVelocity) {
+	if (std::abs(velocity.y) >= maxVelocity) {
 		velocity.y = velocity.y < 0 ? -maxVelocity : maxVelocity;
 	}
 }
 
 void Player::updatePhysics()
 {
+	velocity.y += 1.0 * gravity;
+	if (std::abs(velocity.y) >= gravityMax) {
+		velocity.y = velocity.y < 0 ? -gravityMax : gravityMax;
+	}
 	velocity *= drag;
 	if (std::abs(velocity.x) <= minVelocity) {
 		velocity.x = 0.f;
@@ -150,12 +183,15 @@ void Player::initTexture()
 void Player::initAnimations()
 {
 	animationTimer.restart();
+	animSwitch = true;
 }
 
 void Player::initPhysics()
 {
 	maxVelocity = 10.f;
 	minVelocity = 1.f;
-	accel = 3.f;
-	drag = .98f;
+	accel = 2.f;
+	drag = .9f;
+	gravity = 4.f;
+	gravityMax = 15.f;
 }

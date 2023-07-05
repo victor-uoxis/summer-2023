@@ -10,6 +10,8 @@ public:
 	virtual ~Game();
 
 	// Functions
+
+	void updateCollisions();
 	void update();
 	void render();
 	void renderPlayer();

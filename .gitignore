@@ -2,15 +2,5 @@
 # Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
 ################################################################################
 
-/project/.vs/project/v17/Browse.VC.opendb
-/project/Debug/project.exe
-/project/.vs/project/v17/Browse.VC.db-shm
-/project/.vs/project/v17/Browse.VC.db
-/project/Debug/Player.obj
-/project/.vs/project/v17/.suo
-/project/Debug/project.tlog/project.write.1u.tlog
-/project/Debug/project.ilk
-/project/Debug/project.pdb
-/project/Debug/vc143.idb
-/project/Debug/vc143.pdb
-/project/.vs/project/v17/Browse.VC.db-wal
+/project/.vs/
+/project/Debug/

@@ -1,4 +1,6 @@
-﻿  Player.cpp
-C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(138,49): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(138,31): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  project.vcxproj -> C:\Users\Utilisateur\source\repos\summer-2023\project\Debug\project.exe
+﻿  TileMap.cpp
+C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.h(10,11): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.h(10,11): warning C4183: 'Tilemap' : type de retour manquant ; fonction membre retournant 'int' prise par défaut
+C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.h(11,10): error C2523: 'TileMap::~Tilemap' : balise destructeur non correcte
+C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.cpp(5,1): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.cpp(8,11): error C2523: 'TileMap::~Tilemap' : balise destructeur non correcte
