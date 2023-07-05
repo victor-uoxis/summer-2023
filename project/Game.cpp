@@ -23,11 +23,17 @@ void Game::update()
 
 void Game::render()
 {
-	this->window.clear();
+	window.clear();
 
 	// Render game and shit
+	renderPlayer();
 
-	this->window.display();
+	window.display();
+}
+
+void Game::renderPlayer()
+{
+	player->render(window);
 }
 
 const sf::RenderWindow& Game::getWindow() const
@@ -43,6 +49,7 @@ void Game::updatePlayer()
 void Game::initWindow()
 {
 	this->window.create(sf::VideoMode(800, 600), "It's aliiiive", sf::Style::Close | sf::Style::Titlebar);
+	window.setFramerateLimit(60);
 }
 
 void Game::initPlayer()

@@ -7,14 +7,32 @@ public:
 
 	// Functions
 
+	void moveVector(const float x, const float y);
 	void update();
+	void move();
+	void updateAnimations();
+	void updatePhysics();
 	void render(sf::RenderTarget& target);
 
 private:
+	// Visual
 	sf::Sprite sprite;
-	sf::Texture textureSheet;
+	sf::Texture texture;
+	sf::IntRect frame;
+	sf::Clock animationTimer;
 
+	short animState;
+
+	sf::Vector2f velocity;
+	float maxVelocity;
+	float minVelocity;
+	float accel;
+	float drag;
+
+	void initVar();
 	void initSprite();
-	void initTExture();
+	void initTexture();
+	void initAnimations();
+	void initPhysics();
 };
 

@@ -1,6 +1,4 @@
-﻿  Game.cpp
-  Player.cpp
-  project.cpp
-  Génération de code en cours...
-Debug\includes.obj : warning LNK4042: objet spécifié plus d'une fois ; définitions supplémentaires ignorées
+﻿  Player.cpp
+C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(138,49): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(138,31): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   project.vcxproj -> C:\Users\Utilisateur\source\repos\summer-2023\project\Debug\project.exe
