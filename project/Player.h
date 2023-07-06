@@ -1,4 +1,15 @@
 #pragma once
+
+enum ANIM_STATE {
+	idle = 0,
+	left,
+	right,
+	jump,
+	air,
+	ground_attack,
+	air_attack
+};
+
 class Player
 {
 public:
@@ -7,7 +18,6 @@ public:
 
 
 	// Functions
-
 	void resetAnimTimer();
 	const bool& getAnimSwitch();
 	const sf::Vector2f getPosition() const;
@@ -17,6 +27,7 @@ public:
 	void moveVector(const float x, const float y);
 	void update();
 	void move();
+	void setGrounded();
 	void updateAnimations();
 	void updatePhysics();
 	void render(sf::RenderTarget& target);
@@ -27,8 +38,10 @@ private:
 	sf::Texture texture;
 	sf::IntRect frame;
 	sf::Clock animationTimer;
+	sf::Clock jumpDelay;
 
 	bool animSwitch;
+	bool jumped;
 	short animState;
 
 	sf::Vector2f velocity;

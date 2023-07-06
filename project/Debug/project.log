@@ -1,6 +1,13 @@
-﻿  TileMap.cpp
-C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.h(10,11): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.h(10,11): warning C4183: 'Tilemap' : type de retour manquant ; fonction membre retournant 'int' prise par défaut
-C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.h(11,10): error C2523: 'TileMap::~Tilemap' : balise destructeur non correcte
-C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.cpp(5,1): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-C:\Users\Utilisateur\source\repos\summer-2023\project\TileMap.cpp(8,11): error C2523: 'TileMap::~Tilemap' : balise destructeur non correcte
+﻿  Game.cpp
+  Player.cpp
+C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(152,20): warning C4244: '+=' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(185,49): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(185,31): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  project.cpp
+  Génération de code en cours...
+C:\Users\Utilisateur\source\repos\summer-2023\project\Player.cpp(24): warning C4172: retourne l'adresse d'une variable locale ou : tmp temporaire
+  project.vcxproj -> C:\Users\Utilisateur\source\repos\summer-2023\project\Debug\project.exe

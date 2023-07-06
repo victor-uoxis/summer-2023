@@ -14,7 +14,8 @@ Game::~Game()
 
 void Game::updateCollisions()
 {
-	if (player->getPosition().y + player->getBounds().height >= window.getSize().y) {
+	if (player->getPosition().y + player->getBounds().height / 2 >= window.getSize().y) {
+		player->setGrounded();
 		player->resetGravity();
 		player->setPosition(player->getPosition().x,
 			window.getSize().y - player->getBounds().height / 2);
